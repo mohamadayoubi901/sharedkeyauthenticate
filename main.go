@@ -168,7 +168,7 @@ func (f *SharedKeyCredential) buildCanonicalizedResource(u *url.URL) (string, er
 	}
 	return cr.String(), nil
 }
-func authenticate(AccountName string, Accountkey string, req *http.Request) (string, error) {
+func Authenticate(AccountName string, Accountkey string, req *http.Request) (string, error) {
 	f, err := NewSharedKeyCredential(AccountName, Accountkey)
 	if err != nil {
 		return "", err
